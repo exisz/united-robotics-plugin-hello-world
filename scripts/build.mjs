@@ -35,3 +35,4 @@ await build({
 
 await writeFile(new URL("manifest.json", dist), `${JSON.stringify(manifest, null, 2)}\n`);
 await cp(rpcSource, new URL("rpc.mjs", dist));
+await cp(new URL("../src/agent.json", import.meta.url), new URL("agent.json", dist));
