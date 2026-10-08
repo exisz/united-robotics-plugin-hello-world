@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "methods": {
+    "hello.greet": {
+      "description": "Return a greeting for a name.",
+      "params": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -4,8 +4,8 @@ import test from "node:test";
 
 const dist = new URL("../dist/", import.meta.url);
 
-test("dist contains the fixed three-file artifact contract", async () => {
-  assert.deepEqual((await readdir(dist)).sort(), ["manifest.json", "plugin.js", "rpc.mjs"]);
+test("dist contains the fixed artifact contract (three World files plus agent.json)", async () => {
+  assert.deepEqual((await readdir(dist)).sort(), ["agent.json", "manifest.json", "plugin.js", "rpc.mjs"]);
 });
 
 test("manifest contains exactly the four approved fields", async () => {
